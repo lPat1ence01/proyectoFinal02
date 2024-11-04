@@ -1,0 +1,230 @@
+*{
+    font-family: kadwa;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.header-back{
+    color: #000000;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.header-logo{
+    background-color: #FF0008;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF; 
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.logo {
+    cursor: pointer;
+    width: 150px;
+    height: max-content;
+    margin-right: 40px;
+} 
+
+/* MAIN */
+main {
+    display: block;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra-contenedor {
+    width: 100%; /* Para que ocupe todo el ancho del contenedor */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.barra {
+    height: 12px;
+    width: 50%;
+    background-color: #FF0008;
+    clip-path: polygon(0 0,100% 0, 97% 100%,0% 100%);
+}
+
+.form-conteiner{
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    width: 65%;
+    height: 600px;
+    background-color: gray;
+    position: relative;
+    top: 18%;
+    left: 18%;
+}
+
+.form-conteiner .formulario{
+    width: 65%;
+    height: 100%;
+    background: linear-gradient(to bottom, #FE0008, #980005);
+}
+
+.formulario-1{
+    display: block;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 10%;    
+}
+
+.formulario-llenar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.form-conteiner .formulario h2{
+    font-weight: bold;
+    font-size: 1.6em;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.form-input{
+    padding-top: 10px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-input label{
+    color: #FFFFFF;
+    font-size: 13px;
+    line-height: 5px;
+}
+
+input{
+    width: 100%;
+    box-sizing: border-box; 
+    padding: 10px 12px;
+    border: none;
+    border-radius: 15px;
+}
+
+.contenedor-boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    padding: 5px 8px;
+    border-radius: 20px;
+    margin-top: 2em;
+}
+
+.boton button{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    background-color: #2C3197;
+    color: #FFFFFF;
+    border-radius: 20px;
+    padding: 5px 0px;
+}
+
+.form-conteiner .conteiner-img{
+    width: 35%;
+    height: 100%;
+}
+
+.conteiner-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.barra-derecha{
+    justify-content: flex-end;
+    margin-top: 20px;   
+}
+
+.barra-derecha .barra{
+    height: 12px;
+    width: 50%;
+    background-color: #FE0008;
+    margin-top: 2em;
+    clip-path: polygon(3% 0,100% 0, 100% 100%, 0% 100%);   
+}
+
+@media(max-width: 768px){
+    /*Main*/
+    .form-conteiner{
+        display: block;
+        width: 85%;
+        height: auto;
+        position: relative;
+        top: 15%;
+        left: 7.5%;
+        background-color: transparent;
+    }
+
+    .conteiner-img{
+        display: none;
+    }
+
+    .form-conteiner .formulario{
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+
+    .formulario-llenar{
+        display: block;
+        padding: 10px;
+    }
+
+    .form-input{
+        width: 90%;
+        padding: 10px 0;
+        margin: 0 auto;
+    }
+
+    .boton{
+        margin-top: 0;
+        padding: 5px 20px;
+        margin-bottom: 2em;
+    }
+}

@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: kadwa;
+}
+
+header, #header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    border-bottom: 2px solid black;
+    height: 70px;
+    width: 100%;
+}
+
+.Logo{
+    padding: 0 20px;
+}
+
+
+.logo_ruta {
+    cursor: pointer;
+    width: 150px;
+    height: max-content;
+}
+
+.menu-container{
+    margin-left: auto;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos normales del menú */
+.menu a {
+    color: #000000;
+    text-decoration: none;
+    padding: 0 20px;
+    transition: 0.4s;
+}
+
+.menu a.Ingresar {
+    color: #FFFFFF;
+    padding: 3px 45px;
+    border-radius: 30px;
+    background-color: #2C3197;
+}
+
+.submenu-container{
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    background: linear-gradient(to bottom, #2C3197, #0E1031);
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.submenu li {
+    padding: 10px 0px;
+}
+
+.submenu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu-container:hover .submenu {
+    display: block;
+    z-index: 1; /* Asegura que el submenú se muestre sobre otros elementos */
+}
+
+.carrito-compras{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+    padding: 5px 10px;
+    background-color: #FF0008;
+    border-radius: 25px;
+    color: #FFFFFF;
+}
+
+.carrito-compras p{
+    color: #FFFFFF;
+    padding: 0 15px;
+}
+
+/* Ocultar los íconos del menú en modo normal */
+.mostrar-menu,
+.esconder-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+/* Hover en los enlaces */
+.mostrar-menu:hover,
+.esconder-menu:hover,
+.menu a:hover,
+.menu a.Ingresar:hover {
+    color: #FF0008;
+}
+
+/* Ocultar el checkbox */
+#check {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    /* Mostrar íconos del menú en pantallas pequeñas */
+    .mostrar-menu,
+    .esconder-menu {
+        display: block;
+    }
+
+    /* El menú aparece como un panel deslizante */
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 50px 0;
+        z-index: 100;
+        transition: right 0.8s ease;
+        background-color: #FF0008;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;   
+        margin-left: auto;
+    }
+
+    /* Mostrar enlaces del menú en bloque */
+    .menu a {
+        display: block;
+        padding: 20px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    /* Estilos del ícono de cierre */
+    .esconder-menu{
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        color: #FFFFFF;
+    }
+
+    /* Mostrar el menú al activar el checkbox */
+    #check:checked ~ .menu {
+        right: 0;  /* Mover el menú dentro de la vista */
+    }
+
+    .mostrar-menu:hover,
+    .esconder-menu:hover,
+    .menu a:hover,
+    .menu a.Ingresar:hover {
+        color: #000000;
+    }
+}

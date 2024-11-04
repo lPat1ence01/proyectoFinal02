@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="../Header y Footer/footer.css">
+    <link rel="stylesheet" href="../Header y Footer/header.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <main>
+        <!--Subtitulo Eventos-->
+        <div class="eventos">
+            <h2>Eventos</h2>
+            <div class="eventos-barra"></div>
+        </div>
+
+        <!-- Eventos Fecha -->
+        <section id="fechas">
+            <!-- Fechas -->
+            <button data-fecha="2024-06-21">
+                <div class="num">
+                    <h2>21</h2>
+                </div>
+                <p>Junio</p>
+            </button>
+            <button data-fecha="2024-08-24">
+                <div class="num">
+                    <h2>24</h2>
+                </div>
+                <p>Agosto</p>
+            </button>
+            <button data-fecha="2024-06-21">
+                <div class="num">
+                    <h2>12</h2>
+                </div>
+                <p>Septiembre</p>
+            </button>
+            <button data-fecha="2024-06-21">
+                <div class="num">
+                    <h2>19</h2>
+                </div>
+                <p>Septiembre</p>
+            </button>
+            <button data-fecha="2024-06-21">
+                <div class="num">
+                    <h2>24</h2>
+                </div>
+                <p>Septiembre</p>
+            </button>
+            <button data-fecha="2024-06-21">
+                <div class="num">
+                    <h2>01</h2>
+                </div>
+                <p>Octubre</p>
+            </button>
+            <!-- Agrega más fechas según sea necesario -->
+        </section>
+
+        <!-- Eventos Flyers -->
+        <section id="eventos-1">
+            <div id="eventos-container">
+            <!-- Aquí se mostrarán los eventos al seleccionar una fecha -->
+                <div class="evento01" id="evento01"> 
+                    <div class="flyer">
+                        <img src="../imagenes/Publicidad/01.jpg">
+                    </div>
+                    <div class="descripcion">
+                        <p class="encargado">Ruta6 FastFood</p>
+                        <h2>Perú vs Chile</h2>
+                        <div class="fecha">
+                            <i class="fa-regular fa-calendar"></i>
+                            <p>Viernes 21 de junio - 6:30 pm</p>
+                        </div>
+                        <div class="estado">
+                            <p>Evento:</p>
+                            <p class="est">Gratuito</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="evento02" id="evento02">
+                    <div class="flyer">
+                        <img src="../imagenes/Publicidad/02.jpg">
+                    </div>
+                    <div class="descripcion">
+                        <p class="encargado">Ruta6 FastFood</p>
+                        <h2>Música en Vivo</h2>
+                        <div class="fecha">
+                            <i class="fa-regular fa-calendar"></i>
+                            <p>Viernes 21 de junio - 8:30 pm</p>
+                        </div>
+                        <div class="estado">
+                            <p>Evento:</p>
+                            <p class="est">Gratuito</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+
+        <!--Subtitulo Alquiler-->
+        <div class="eventos">
+            <h2>Alquiler</h2>
+            <div class="eventos-barra"></div>
+        </div>
+
+        <!-- Alquiler -->
+        <div class="container-alquiler">
+            <div class="informacion">
+                <p>Si deseas mas <span>INFORMACIÓN</span> dar click aqui</p>
+                <a href="../Contactanos/contacto.html">Formulario</a>
+            </div>
+            <div class="img">
+                <img src="../imagenes/Publicidad/03.jpg">
+            </div>
+        </div>
+    </main>
+    <div id="footer"></div>
+
+    <!-- Javascript -->
+    <script src="eventos.js"></script>
+
+    <!-- Header -->
+    <script type="module">
+        var fot = document.querySelector("#header")
+        fot.innerHTML = `
+            <header>
+        <div class="Logo">
+            <img src="../imagenes/Logo_ruta6.png" class="logo_ruta">
+        </div>
+        <div class="menu-container">
+            <input type="checkbox" id="check">
+            <label for="check" class="mostrar-menu">&#8801</label>
+            <nav class="menu">
+                <a href="../Main/index.html">Inicio</a>
+                <a href="../Nosotros/nosotros.html">Nosotros</a>
+                <a href="../Eventos/Eventos.html">Eventos</a>
+                <a href="#">Locales</a>
+                <a href="../Contactanos/contacto.html">Contactanos</a>
+        
+                <!--Submenu-->
+                <div class="submenu-container">
+                    <a href="#" class="Ingresar">Ingresar</a>
+                    <ul class="submenu">
+                        <li><a href="../Login y Register/login.html">Iniciar Sesión</a></li>
+                        <li><a href="../Login y Register/register.html">Registrarse</a></li>
+                    </ul>
+                </div>
+    
+                <div class="carrito-compras">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>S/.0.00</p>
+                </div>
+                <label for="check" class="esconder-menu">&#215</label>
+            </nav>
+        </div>
+    </header>
+            `
+    </script>
+
+    <script type="module">
+        var fot = document.querySelector("#footer")
+        fot.innerHTML = `
+        <footer>
+        <div class="footer">
+            <div class="footer-left">
+                <div class="footer-left-img">
+                    <img src="../imagenes/Logo_ruta6.png">
+                </div>
+                <p>El sabor que te acompaña, estés donde estés.</p>
+                <div class="footer-left-logos">
+                <a>
+                    <div class="left-logo">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                </a>
+                <a>
+                    <div class="left-logo">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                </a>
+                <a>
+                    <div class="left-logo">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                </a>
+                <a>
+                    <div class="left-logo">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-center-left">
+                    <h3>Sobre Nosotros</h3>
+                    <ul>
+                        <li><a href="#">Quienes somos</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Restaurantes</a></li>
+                        <li><a href="#">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-center-center">
+                    <h3>Asistencia</h3>
+                    <ul>
+                        <li class="opcion-footer"><a href="#">Cambios y reclamos</a></li>
+                        <li class="opcion-footer"><a href="#">Terminos y condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-center-right">
+                    <h3>Contáctanos</h3>
+                    <ul>
+                        <li class="opcion-footer"><a href="#">Teléfono: 076 123456</a></li>
+                        <li class="opcion-footer"><a href="#">Celular: (+51) 987654321</a></li>
+                        <li class="opcion-footer"><a href="#">Email: ruta6caxas@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-ubicacion">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.764517505615!2d-78.5088882252041!3d-7.153203070176433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91b25b9fc49fa949%3A0x839be38a41bfa38b!2sRuta%206%20Food%20Park%20Caxas!5e0!3m2!1sen!2spe!4v1729563859832!5m2!1sen!2spe" width="300" height="300"></iframe>
+                </div>
+            </div>
+        </div>
+        <p class="parrafo-footer">Copyright. Todos los derechos estan reservados, diseños y protegidos por RUTA6 FAST FOOD</p>
+    </footer>
+        `
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: kadwa;
+}
+
+/* Footer de web */
+.footer{
+    margin-top: 1.5em;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to bottom, #FE0008, #980005);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-left{
+    width: 450px;
+    height: 350px;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em;
+}
+
+.footer-right{
+    width: 350px;
+    height: 350px;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.footer-left p{
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    color: #FFFFFF;
+    margin-top: 1em;
+}
+
+.footer-center{
+    width: 900px;
+    height: 350px;
+    gap: 2em;
+
+}
+
+.footer-left-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-left-img img{
+    cursor: pointer;
+    width: 350px;
+    height: max-content;
+}
+
+.footer-left-logos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+.left-logo{
+    margin-top: 15px;
+    font-size: 40px;
+    padding: 0 10px;
+    color: #FFFFFF;
+}
+
+.footer-center{
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    line-height: 2em;
+    color: #FFFFFF;
+    font-family: kadwa;
+    font-size: 20px;
+
+}
+
+.footer-center li, a{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: kadwa;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+footer .parrafo-footer{
+    color: #FFFFFF;
+    border-top: 2px solid #FFFFFF;
+    background-color: #980005;
+    font-size: 0.8em;
+    font-weight: normal;
+    padding: 5px 0 5px 30px;
+}
+
+@media(max-width: 768px){
+    /* Footer */
+
+    .footer{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .footer-left{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        max-width: 100%;
+        gap: 1em;
+        margin-top: 0;
+    }
+
+    .footer-left-img img{
+        width: 250px;
+    }
+
+    .footer-left p{
+        width: 100%;
+        font-size: 1.5em;
+        margin-top: 0;
+    }
+
+    .footer-left-logos{
+        display: flex;
+        justify-content: center;
+    }
+
+    .left-logo{
+        margin-top: 0;
+        font-size: 30px;
+        padding: 0 15px;
+
+    }
+
+    .footer-right, .footer-center{
+        display: none;
+    }
+
+    footer .parrafo-footer{
+        width: auto;
+        font-size: 0.5em;
+    }
+}

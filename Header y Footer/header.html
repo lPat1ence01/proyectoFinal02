@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <div class="Logo">
+            <img src="../imagenes/Logo_ruta6.png" class="logo_ruta">
+        </div>
+        <div class="menu-container">
+            <input type="checkbox" id="check">
+            <label for="check" class="mostrar-menu">&#8801</label>
+            <nav class="menu">
+                <a href="../Main/index.html">Inicio</a>
+                <a href="../Nosotros/nosotros.html">Nosotros</a>
+                <a href="../Eventos/Eventos.html">Eventos</a>
+                <a href="#">Locales</a>
+                <a href="../Contactanos/contacto.html">Contactanos</a>
+        
+                <!--Submenu-->
+                <div class="submenu-container">
+                    <a href="#" class="Ingresar">Ingresar</a>
+                    <ul class="submenu">
+                        <li><a href="../Login y Register/login.html">Iniciar Sesión</a></li>
+                        <li><a href="../Login y Register/register.html">Registrarse</a></li>
+                    </ul>
+                </div>
+    
+                <div class="carrito-compras">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>S/.0.00</p>
+                </div>
+                <label for="check" class="esconder-menu">&#215</label>
+            </nav>
+        </div>
+    </header>
+
+    <script src="header.js"></script>
+</body>
+</html>

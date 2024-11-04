@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../Header y Footer/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-back">
+            <div class="header-logo">
+                <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+            <p>Volver</p>
+        </div>
+        <div class="header-img">
+            <img src="../imagenes/Logo_ruta6.png" class="logo">
+        </div>
+    </header>
+    <main>
+        <div class="barra-contenedor">
+            <div class="barra"></div>
+        </div>
+        <div class="form-conteiner">
+            <div class="imagen">
+                <img src="../imagenes/restaurantes/Sedes/login.jpg">
+            </div>
+            <form class="formulario" id="loginForm">
+                <div class="formulario-1">
+                    <h2>Iniciar Sesión</h2>
+                    <div class="form-input">
+                        <label for="gmail">Email</label>
+                        <input type="text" placeholder="Ingrese su email" required id="gmail">
+                    </div>
+                    <div class="form-input">
+                        <label for="password">Contraseña</label>
+                        <input type="password" placeholder="Ingrese su contraseña" required id="password">
+                        <a href="#"><p>¿Has olvidado tu contraseña?</p></a>
+                    </div>
+                    <div class="botones">
+                        <button type="submit" class="continuar">Continuar</button>
+                        <a href="../Login y Register/register.html" class="registrarse">Registrarse</a>
+                    </div>
+                    <div class="o">
+                        <div class="linea"></div>
+                        <p>o</p>
+                        <div class="linea"></div>
+                    </div>
+                    <div class="icons-conteiner">
+                        <div class="icon">
+                            <i class="fa-brands fa-facebook"></i>
+                            <a href="#">Entrar con Facebook</a>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-brands fa-google"></i>
+                            <a href="#">Entrar con Google</a>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-brands fa-apple"></i>
+                            <a href="#">Entrar con Apple</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="barra-contenedor barra-derecha">
+            <div class="barra"></div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="login.js"></script>
+
+    <script type="module">
+        var fot = document.querySelector("#footer")
+        fot.innerHTML = `
+        <footer>
+        <div class="footer">
+            <div class="footer-left">
+                <div class="footer-left-img">
+                    <img src="../imagenes/Logo_ruta6.png">
+                </div>
+                <p>El sabor que te acompaña, estés donde estés.</p>
+                <div class="footer-left-logos">
+                <a>
+                    <div class="left-logo">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                </a>
+                <a>
+                    <div class="left-logo">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                </a>
+                <a>
+                    <div class="left-logo">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                </a>
+                <a>
+                    <div class="left-logo">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-center-left">
+                    <h3>Sobre Nosotros</h3>
+                    <ul>
+                        <li><a href="#">Quienes somos</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Restaurantes</a></li>
+                        <li><a href="#">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-center-center">
+                    <h3>Asistencia</h3>
+                    <ul>
+                        <li class="opcion-footer"><a href="#">Cambios y reclamos</a></li>
+                        <li class="opcion-footer"><a href="#">Terminos y condiciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-center-right">
+                    <h3>Contáctanos</h3>
+                    <ul>
+                        <li class="opcion-footer"><a href="#">Teléfono: 076 123456</a></li>
+                        <li class="opcion-footer"><a href="#">Celular: (+51) 987654321</a></li>
+                        <li class="opcion-footer"><a href="#">Email: ruta6caxas@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-ubicacion">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.764517505615!2d-78.5088882252041!3d-7.153203070176433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91b25b9fc49fa949%3A0x839be38a41bfa38b!2sRuta%206%20Food%20Park%20Caxas!5e0!3m2!1sen!2spe!4v1729563859832!5m2!1sen!2spe" width="300" height="300"></iframe>
+                </div>
+            </div>
+        </div>
+        <p class="parrafo-footer">Copyright. Todos los derechos estan reservados, diseños y protegidos por RUTA6 FAST FOOD</p>
+    </footer>
+        `
+    </script>
+</body>
+</html>
