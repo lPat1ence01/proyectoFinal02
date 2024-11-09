@@ -272,3 +272,78 @@
     border-radius: 20px;
     margin: 2em 6em;
 }
+
+.agregar-comentario{
+    margin: 2em;
+    border: 3px solid #FE0008;
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen{
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    border: 3px solid #FE0008;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.foto{
+    width: 95%;
+    height: 95%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.datos-comentario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+}
+
+.datos-persona {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+.puntaje {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5em;
+}
+
+form{
+    min-width: 100%;
+    height: auto;
+    gap: 0;
+}
+
+input{
+    width: 100%;
+    height: 7em;
+}
