@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (user) {
         const parsedUser = JSON.parse(user);
         headerElement.innerHTML = `
-            <header>
+            <div id="header">
                 <div class="Logo">
                     <img src="../imagenes/Logo_ruta6.png" class="logo_ruta">
                 </div>
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <input type="checkbox" id="check">
                     <label for="check" class="mostrar-menu">&#8801</label>
                     <nav class="menu">
-                        <a href="../Main/index.html">Inicio</a>
+                        <a href="../Principal/index.html">Inicio</a>
                         <a href="../Nosotros/nosotros.html">Nosotros</a>
                         <a href="../Eventos/Eventos.html">Eventos</a>
                         <a href="#">Locales</a>
@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         <div class="submenu-container">
                             <a href="#" class="Ingresar">Hola, ${parsedUser.nombre}!</a>
                             <ul class="submenu">
-                                <li><a href="#" id="logout">Mi Perfil</a></li>
-                                <li><a href="#" id="logout">Configuración</a></li>
+                                <li><a href="#" id="perfil">Mi Perfil</a></li>
+                                <li><a href="#" id="config">Configuración</a></li>
                                 <li><a href="#" id="logout">Cerrar Sesión</a></li>
                             </ul>
                         </div>
@@ -33,13 +33,13 @@ document.addEventListener("DOMContentLoaded", function() {
                         <label for="check" class="esconder-menu">&#215</label>
                     </nav>
                 </div>
-            </header>
+            </div>
         `;
 
         // Cerrar sesión
         document.getElementById("logout").addEventListener("click", function() {
             localStorage.removeItem("user");
-            window.location.href = "../Login y Register/login.html";
+            window.location.href = "../Principal/index.html";
         });
 
     } else {

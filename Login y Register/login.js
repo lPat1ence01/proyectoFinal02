@@ -9,7 +9,7 @@ document.getElementById("loginForm").addEventListener("submit",function(event) {
         var parsedUser = JSON.parse(user);
         if(parsedUser.contraseña == contraseña){
             localStorage.setItem("user", JSON.stringify(parsedUser));
-            window.location.href ="../index.html"
+            window.location.href ="../Principal/index.html"
         } else {
             alert("Contraseña Incorrecta")
         }
