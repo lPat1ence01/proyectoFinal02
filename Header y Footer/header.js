@@ -16,12 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
                         <a href="../Principal/index.html">Inicio</a>
                         <a href="../Nosotros/nosotros.html">Nosotros</a>
                         <a href="../Eventos/Eventos.html">Eventos</a>
-                        <a href="#">Locales</a>
+                        <a href="../Locales/Locales.html">Locales</a>
                         <a href="../Contactanos/contacto.html">Contactanos</a>
                         <div class="submenu-container">
                             <a href="#" class="Ingresar">Hola, ${parsedUser.nombre}!</a>
                             <ul class="submenu">
-                                <li><a href="#" id="perfil">Mi Perfil</a></li>
+                                <li><a href="../Perfil/Perfil.html" id="perfil">Mi Perfil</a></li>
                                 <li><a href="#" id="config">Configuración</a></li>
                                 <li><a href="#" id="logout">Cerrar Sesión</a></li>
                             </ul>
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <a href="../Main/index.html">Inicio</a>
                         <a href="../Nosotros/nosotros.html">Nosotros</a>
                         <a href="../Eventos/Eventos.html">Eventos</a>
-                        <a href="#">Locales</a>
+                        <a href="../Locales/Locales.html">Locales</a>
                         <a href="../Contactanos/contacto.html">Contactanos</a>
                         <div class="submenu-container">
                             <a href="#" class="Ingresar">Ingresar</a>
