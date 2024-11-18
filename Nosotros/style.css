@@ -154,3 +154,101 @@
 .vision-description p{
     font-size: 1.2em;
 }
+
+/* Responsive solo para móvil */
+@media (max-width: 768px) {
+    .nosotros-conteiner {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 1em;
+        border-width: 1px; /* Bordes más delgados */
+    }
+
+    .imagen {
+        width: 200px;
+        height: 200px;
+        margin: 15px 0;
+    }
+
+    .descripcion {
+        width: 80%;
+        height: auto;
+        justify-content: center;
+        align-items: center; 
+        text-align: center;
+    }
+
+    .descripcion h2 {
+        font-size: 1.8em;
+    }
+
+    .barra {
+        width: 80%;
+        height: 15px;
+        margin: 5px auto;
+    }
+
+    .descripcion p {
+        font-size: 0.9em;
+        margin: 10px 0;
+    }
+
+    /* Misión y Visión */
+    .conteiner-mision,
+    .conteiner-vision {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        gap: 20px;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .mision-description,
+    .vision-description {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .mision-description h2,
+    .vision-description h2 {
+        font-size: 1.8em;
+    }
+
+    .vision-description h2 {
+        text-align: center;
+    }
+
+    .mision-description p,
+    .vision-description p {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    .conteiner-mision .logo,
+    .conteiner-vision .logo {
+        min-width: 150px;
+        min-height: 150px;
+    }
+
+    /* Ajuste de sombras para móvil */
+    .conteiner-mision .logo {
+        -webkit-box-shadow: -10px 10px 0px -4px rgba(14,16,49,1);
+        -moz-box-shadow: -10px 10px 0px -4px rgba(14,16,49,1);
+        box-shadow: -10px 10px 0px -4px rgba(14,16,49,1);
+    }
+
+    .conteiner-vision .logo {
+        -webkit-box-shadow: 10px 10px 0px 1px rgba(152,0,5,1);
+        -moz-box-shadow: 10px 10px 0px 1px rgba(152,0,5,1);
+        box-shadow: 10px 10px 0px 1px rgba(152,0,5,1);
+    }
+
+    .conteiner-mision .logo i,
+    .conteiner-vision .logo i {
+        font-size: 4em;
+    }
+}

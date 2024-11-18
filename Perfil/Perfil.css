@@ -1,0 +1,641 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Título principal con barra roja */
+.titulo-principal {
+    position: relative;
+    margin-bottom: 40px;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.titulo-principal h1 {
+    font-size: 42px;
+    font-weight: 900;
+    margin: 0;
+    position: relative;
+    color: black;
+    font-family: 'Anton', 'Oswald', 'Roboto Condensed', sans-serif;
+    letter-spacing: 2px;
+    display: inline-block;
+    z-index: 1;
+}
+
+.titulo-principal span {
+    font-family: 'Arial Black', sans-serif;
+    color: white;
+    text-shadow: 
+        -2px -2px 0 black,  
+        2px -2px 0 black,
+        -2px 2px 0 black,
+        2px 2px 0 black;
+}
+
+.titulo-principal h1::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    width: 110%;
+    height: 17px;
+    background-color: #FF0008;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* Secciones y Headers */
+.seccion {
+    margin-bottom: 40px;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.seccion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.seccion-header i {
+    font-size: 30px;
+    color: #df0404;
+    position: relative; /* Permite mover el ícono de manera independiente */
+    left: 3px; /* Ajusta este valor para mover el ícono hacia la izquierda */
+}
+
+.seccion-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    flex-grow: 1;
+    margin-left: 10px; /* Asegura espacio entre el título y el ícono si es necesario */
+}
+
+
+/* Botones de navegación */
+.nav-botones {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+.nav-botones-2 {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+.nav-botones i {
+    font-size: 17px; 
+    color: #fefefe;
+    margin-right: 3px; 
+}
+.nav-botones-2 i {
+    font-size: 17px; 
+    color: #fefefe;
+    margin-right: 3px; 
+}
+.nav-botones button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    background: #FF0008;
+    color: rgb(239, 239, 239);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-botones-2 button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    background: #2C3197;
+    color: rgb(239, 239, 239);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-botones button:hover {
+    background: #FF0008;
+    transform: scale(1.1);
+}
+.nav-botones-2 button:hover {
+    background: #2C3197;
+    transform: scale(1.1);
+}
+
+/* Card Slider */
+.card-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scrollbar-width: none;
+    perspective: 1000px;
+}
+
+.card-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* Cards */
+.card {
+    min-width: 250px;
+    min-height: 350px; /* Aumentamos la altura mínima */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    position: relative;
+    transform-origin: center center;
+    backface-visibility: hidden;
+    will-change: transform;
+    background: linear-gradient(to right, #FF0008, rgba(152,0,5,1));
+    display: flex;
+    flex-direction: column;
+}
+.card-comida{
+    min-width: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+    position: relative;
+    transform-origin: center center;
+    backface-visibility: hidden;
+    will-change: transform;
+    background: linear-gradient(to right, #2C3197, rgba(14,16,49,1));
+}
+.card:hover,
+.card-comida:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.card-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.card:hover .card-image img,
+.card-comida:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.card:hover .card-image::after,
+.card-comida:hover .card-image::after {
+    background: rgba(0, 0, 0, 0.1);
+}
+/* Botón de favoritos */
+.favorito-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgb(3, 3, 3);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.favorito-btn i {
+    color: #FF0008;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.favorito-btn:hover {
+    transform: scale(1.1);
+}
+
+.favorito-btn.active i {
+    animation: favorito-animation 0.3s ease;
+}
+
+/* Animación de favoritos */
+@keyframes favorito-animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Card Content */
+.card-content {
+    padding: 15px;
+    color: #fffefe;
+    text-align: center;
+}
+
+.card-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 23px;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    color: white;
+    text-transform: none;
+    letter-spacing: 0.2px;
+}
+
+/* BOTON VER CARTA */
+.ver-carta-btn {
+    background-color: #2C3197; /* Azul similar */
+    color: white; /* Texto blanco */
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 8px 20px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de letra */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Manito al pasar */
+    transition: all 0.3s ease; /* Suaviza el hover */
+}
+
+.ver-carta-btn:hover {
+    background-color: #1B2373; /* Azul más oscuro al pasar */
+    transform: scale(1.05); /* Crece ligeramente */
+}
+
+/* Precios y Rating */
+.precio {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+
+/*-----*/
+/* Eventos Container */
+.eventos-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 10px;
+}
+
+/* Tarjeta de Evento */
+.evento-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.evento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Favorito */
+.favorito-evento {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.favorito-evento i {
+    color: #FF0008;
+    font-size: 18px;
+}
+
+/* Imagen del Evento */
+.evento-imagen {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.evento-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Banner sobre la imagen */
+.evento-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 80%;
+    position: relative; /* Asegúrate de que puedas moverlo */
+    left: 450px; /* Ajusta el valor para moverlo a la derecha */
+    top: 17px;  /* Ajusta el valor para moverlo hacia abajo */
+}
+
+.evento-banner span {
+    display: inline-block;
+    background: #FF0008;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.evento-banner h3 {
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Información del Evento */
+.evento-info {
+    padding: 20px;
+    background: white;
+}
+
+.evento-info h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.evento-fecha {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+}
+
+.evento-fecha i {
+    color: #FF0008;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .eventos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .evento-banner h3 {
+        font-size: 20px;
+    }
+}
+
+/* Efecto activo para favoritos */
+.favorito-evento.active i {
+    animation: favorito-animation 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .titulo-principal h1 {
+        font-size: 32px;
+    }
+
+    .card {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-principal {
+        padding: 10px;
+    }
+
+    .titulo-principal {
+        padding-left: 10px;
+    }
+
+    .card {
+        min-width: 160px;
+    }
+}
+
+/* Estilos para la sección de perfil */
+.perfil-seccion {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 20px;
+    padding: 20px;
+    margin: 20px 0 40px 0;
+    background: transparent;
+    position: relative;
+}
+.perfil-imagen-container {
+    position: relative;
+    width: 170px; /* Reducimos el tamaño */
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #000000;
+    background: #fff;
+}
+
+.perfil-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.camera-icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 4px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.camera-icon:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.perfil-info {
+    flex-grow: 0; /* No crece */
+    max-width: 400px; /* Ancho máximo */
+}
+
+.perfil-info h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+.perfil-info p {
+    margin: 4px 0;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.perfil-info i {
+    color: #666;
+    width: 16px;
+    font-size: 14px;
+}
+
+
+
+
+
+/* Responsive =========================================================*/
+@media (max-width: 768px) {
+    .titulo-principal h1 {
+        font-size: 28px;
+    }
+    .titulo-principal h1::after {
+        height: 8px;
+        bottom: 1px;
+    }
+    /* Secciones y Headers */
+    .seccion {
+        margin-bottom: 40px;
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 94%; /* Nuevo - hace el contenedor más estrecho */
+        margin-left: 10px;
+       
+    }
+    .seccion-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .seccion-header i { 
+        font-size: 20px;
+        color: #df0404;
+        position: relative; 
+        left: 3px;
+    }
+    .seccion-header h2 {
+        font-size: 20px;
+        font-weight: 600;
+        flex-grow: 1;
+        margin-left: 10px; 
+    }
+    .card {
+        min-width: 260px;
+        min-height: 350px; /* Aumentamos la altura mínima */
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+        position: relative;
+        transform: translateX(0); /* Mueve la tarjeta 20px a la derecha */
+        backface-visibility: hidden;
+        will-change: transform;
+        background: linear-gradient(to right, #FF0008, rgba(152,0,5,1));
+        display: flex;
+        flex-direction: column;
+    }
+    .card-comida{
+        min-width: 260px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+        position: relative;
+        transform: translateX(0); /* Mueve la tarjeta 20px a la derecha */
+        backface-visibility: hidden;
+        will-change: transform;
+        background: linear-gradient(to right, #2C3197, rgba(14,16,49,1));
+        
+    }
+    /* Perfil */
+    .perfil-seccion {
+        justify-content: center;
+        padding-right: 20px;
+        margin: 10px 0 30px 0;
+    }
+
+    .perfil-imagen-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .perfil-info h2 {
+        font-size: 18px;
+    }
+
+    .perfil-info p {
+        font-size: 13px;
+    }
+    .nav-botones button,
+    .nav-botones-2 button{
+        display: none;
+    }
+    .nav-botones button i,
+    .nav-botones-2 button i{
+        display: none;
+    }
+}
+

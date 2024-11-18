@@ -263,3 +263,259 @@
     -2px 2px 0 #980005,
     2px 2px 0 #980005;    
 }
+
+/* Estilos base */
+* {
+    padding: 0;
+    margin: 0;
+    font-size: kadwa;
+}
+
+/* DESCRIPCIÓN DEL RESTAURANTE */
+.saiko-container {
+    max-width: 100%;
+    height: 100%;
+    margin: 2em 7em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+    .saiko-container {
+        margin: 2em 4em;
+    }
+
+    .datos-container .titulo h2 {
+        font-size: 3.5em;
+    }
+
+    .datos-container .titulo h3 {
+        font-size: 2em;
+    }
+
+    .comida {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .saiko-container {
+        margin: 2em 2em;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .saiko-description {
+        max-width: 300px;
+        height: auto;
+        margin-bottom: 2em;
+        padding: 2em 0;
+    }
+
+    .datos-container {
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .datos-container .titulo {
+        flex-direction: column;
+        gap: 0.2em;
+        line-height: 1.2em;
+    }
+
+    .datos-contacto li {
+        margin-left: 0;
+        list-style: none;
+        text-align: center;
+    }
+
+    .populares-container {
+        margin: 2em 1em;
+    }
+
+    .comida-container {
+        margin: 0 1em;
+    }
+
+    .comida {
+        flex-direction: column;
+        height: auto;
+        padding: 2em 0;
+    }
+
+    .comida .img-comida {
+        width: 220px;
+        height: 220px;
+        margin: 0 0 1em 0;
+    }
+
+    .descripcion-comida {
+        width: 80%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .more {
+        position: relative;
+        right: 0;
+        margin-top: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .saiko-container {
+        margin: 1em;
+    }
+
+    .img {
+        width: 160px;
+        height: 160px;
+        padding: 1em;
+    }
+
+    .datos-saiko h2 {
+        font-size: 1.5em;
+    }
+
+    .datos-saiko h3 {
+        font-size: 1.2em;
+    }
+
+    .stars {
+        font-size: 1.5em;
+    }
+
+    .redes-sociales {
+        font-size: 1.5em;
+    }
+
+    .datos-container .titulo h2 {
+        font-size: 2.5em;
+    }
+
+    .datos-container .titulo h3 {
+        font-size: 1.5em;
+    }
+
+    .populares-container .titulo,
+    .populares-container .titulo-2 {
+        font-size: 1.5em;
+        margin-left: 1em;
+    }
+
+    .comida .img-comida {
+        width: 180px;
+        height: 180px;
+    }
+
+    .descripcion-comida h4 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .saiko-container {
+        margin: 0.5em;
+    }
+
+    .saiko-description {
+        max-width: 260px;
+    }
+
+    .img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .datos-saiko h2 {
+        font-size: 1.2em;
+    }
+
+    .datos-saiko h3 {
+        font-size: 1em;
+    }
+
+    .stars {
+        font-size: 1.2em;
+    }
+
+    .redes-sociales {
+        font-size: 1.2em;
+    }
+
+    .datos-container .titulo h2 {
+        font-size: 2em;
+    }
+
+    .datos-container .titulo h3 {
+        font-size: 1.2em;
+    }
+
+    .populares-container .titulo,
+    .populares-container .titulo-2 {
+        font-size: 1.2em;
+        margin-left: 0.5em;
+        line-height: 2em;
+    }
+
+    .comida {
+        margin: 1em 0.5em;
+    }
+
+    .comida .img-comida {
+        width: 160px;
+        height: 160px;
+    }
+
+    .descripcion-comida {
+        width: 90%;
+    }
+
+    .descripcion-comida h3 {
+        font-size: 0.9em;
+    }
+
+    .descripcion-comida p {
+        font-size: 12px;
+    }
+
+    .descripcion-comida h4 {
+        font-size: 1.2em;
+    }
+
+    .more i {
+        font-size: 2em;
+    }
+}
+
+/* Ajustes para la interactividad en dispositivos táctiles */
+@media (hover: none) {
+    .img-comida i:hover,
+    .more i:hover {
+        transform: none;
+    }
+
+    .img-comida i:active,
+    .more i:active {
+        transform: scale(0.95);
+    }
+}
+
+/* Optimizaciones para mejor rendimiento */
+.img-comida img,
+.img img {
+    object-fit: cover;
+}
+
+.comida {
+    transition: transform 0.3s ease;
+}
+
+.descripcion-comida {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}

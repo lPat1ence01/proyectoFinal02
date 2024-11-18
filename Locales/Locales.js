@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             container.scrollLeft -= scrollAmount;
         }
-    }// Configurar los botones de navegación para cada slider
+    }
+
+    // Configurar los botones de navegación para cada slider
     document.querySelectorAll('.local-seccion').forEach(section => {
         const slider = section.querySelector('.productos-slider');
         const prevBtn = section.querySelector('.prev-btn');
@@ -42,7 +44,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 nextBtn5.addEventListener('click', () => handleSliderNavigation(slider, 'next'));
             }
         }
-    });// Funcionalidad del buscador
+    });
+
+    // Funcionalidad del buscador
     const searchInput = document.querySelector('.buscador-locales input');
     const locales = document.querySelectorAll('.local-seccion');
     if (searchInput) {
@@ -64,27 +68,93 @@ document.addEventListener('DOMContentLoaded', function() {
                 local.style.display = found ? 'block' : 'none';
             });
         });
-    }// Funcionalidad de favoritos con animación de rayo
-    document.querySelectorAll('.favorito').forEach(btn => {
-        const localSection = btn.closest('.local-seccion'); // Encuentra la sección local correspondiente
-        const rayo = localSection.querySelector('.rayo'); // Encuentra el contenedor del rayo
-        if (localStorage.getItem(localSection.id) === 'favorito') {
+    }
+
+    // Funcionalidad de favoritos mejorada
+    document.querySelectorAll('.favorito').forEach((btn, index) => {
+        // Crear un ID único para cada botón basado en su contexto
+        const localSection = btn.closest('.local-seccion');
+        const localTitle = localSection?.querySelector('.local-titulo h2')?.textContent || '';
+        const favoriteId = `favorite-local-${localTitle.replace(/\s+/g, '-').toLowerCase()}`;
+        
+        // Asignar el ID al elemento padre
+        if (localSection) {
+            localSection.dataset.id = favoriteId;
+        }
+
+        // Recuperar el estado guardado
+        if (localStorage.getItem(favoriteId) === 'true') {
             const icon = btn.querySelector('i');
             icon.classList.remove('far');
             icon.classList.add('fas');
+            btn.classList.add('active');
+            // Activar el rayo si está guardado como favorito
+            const rayo = localSection.querySelector('.rayo');
+            if (rayo) {
+                localSection.classList.add('favorito-activado');
+            }
         }
-        btn.addEventListener('click', function() {
+
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
             const icon = this.querySelector('i');
+            
+            // Toggle de clases
+            this.classList.toggle('active');
             icon.classList.toggle('far');
             icon.classList.toggle('fas');
-            // Activar la animación del rayo solo cuando se hace clic
-            localSection.classList.toggle('favorito-activado'); // Activa el rayo
-            // Guardar el estado del favorito en localStorage
-            if (icon.classList.contains('fas')) {
-                localStorage.setItem(localSection.id, 'favorito'); // Guardar como favorito
-            } else {
-                localStorage.removeItem(localSection.id); // Remover favorito
+
+            // Guardar estado en localStorage
+            const isActive = icon.classList.contains('fas');
+            localStorage.setItem(favoriteId, isActive);
+
+            // Efecto de rayo
+            localSection.classList.toggle('favorito-activado');
+
+            // Efecto de animación del corazón
+            icon.style.animation = 'none';
+            icon.offsetHeight; // Trigger reflow
+            icon.style.animation = 'favorito-animation 0.3s ease';
+
+            // Si tiene rayo, animar
+            const rayo = localSection.querySelector('.rayo');
+            if (rayo && isActive) {
+                rayo.style.animation = 'none';
+                rayo.offsetHeight;
+                rayo.style.animation = 'rayo-animation 0.6s ease-out forwards';
             }
+        });
+    });
+
+    // Smooth scrolling para los sliders
+    document.querySelectorAll('.productos-slider').forEach(slider => {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2;
+            slider.scrollLeft = scrollLeft - walk;
         });
     });
 });

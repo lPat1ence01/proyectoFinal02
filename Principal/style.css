@@ -663,15 +663,65 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 
 
 
-/* Responsividad */
+/* Responsive */
+@media (max-width: 1200px) {
+    .slide-conteiner,
+    .vendido-conteiner {
+        height: 450px;
+    }
+
+    .texto-slide,
+    .vendido-conteiner .texto-slide-2 {
+        font-size: 35px;
+    }
+
+    .logolocal {
+        width: 180px;
+        height: 180px;
+    }
+
+    .logolocal-img {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+@media (max-width: 992px) {
+    .buscador {
+        width: 60%;
+    }
+
+    .texto-slide,
+    .vendido-conteiner .texto-slide-2 {
+        font-size: 30px;
+        margin-left: 10px;
+    }
+
+    .card,
+    .card-red,
+    .card-blue {
+        max-width: 85%;
+        min-height: 320px;
+    }
+
+    .barra, 
+    .barra-derecha .barra {
+        width: 35%;
+        height: 8px;
+    }
+
+    .parrafo-sedes {
+        font-size: 25px;
+    }
+}
+
 @media(max-width: 768px) {
-    /* Mostrar íconos del menú en pantallas pequeñas */
+    /* Header y Menú */
     .mostrar-menu,
     .esconder-menu {
         display: block;
     }
 
-    /* El menú aparece como un panel deslizante */
     .menu {
         position: fixed;
         width: 100%;
@@ -686,197 +736,232 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;   
+        align-items: center;
     }
 
-    /* Mostrar enlaces del menú en bloque */
     .menu a {
         display: block;
         padding: 20px;
         text-align: center;
         color: #FFFFFF;
+        font-size: 16px;
     }
 
-    /* Estilos del ícono de cierre */
-    .esconder-menu{
+    .esconder-menu {
         position: absolute;
         top: 20px;
         right: 40px;
         color: #FFFFFF;
     }
 
-    /* Mostrar el menú al activar el checkbox */
     #check:checked ~ .menu {
-        right: 0;  /* Mover el menú dentro de la vista */
+        right: 0;
     }
 
-    .mostrar-menu:hover,
-    .esconder-menu:hover,
-    .menu a:hover,
-    .menu a.Ingresar:hover {
-        color: #000000;
+    /* Buscador */
+    .buscador {
+        width: 70%;
     }
 
-    /* BUSCARDOR */
-    .buscador{
-        width: 50%;
+    /* Sliders y Cards */
+    .slide-conteiner,
+    .vendido-conteiner {
+        height: 410px;
     }
 
-    /* SLIDER */
-    .slider{
-        width: 100%;
-    }
-
-    /* Lo mas vendido */
-    .texto-slide{
-        font-size: 40px;
+    .texto-slide,
+    .vendido-conteiner .texto-slide-2 {
+        font-size: 20px;
         margin-left: 5px;
         line-height: 2em;
     }
 
-    .slide-conteiner{
-        height: 410px;
-    }
-
-    .card{
+    .card,
+    .card-red,
+    .card-blue {
         max-width: 80%;
-        height: auto;
         min-height: 300px;
     }
 
-    .texto-slide{
+    .name {
         font-size: 20px;
+        line-height: 1.2;
     }
 
-    .name{
-        font-size: 20px;
-        line-height: 0;
-    }
-    
-    .description{
-        line-height: 2em;
+    .description {
+        line-height: 1.5em;
+        font-size: 14px;
     }
 
-    .button{
+    .button {
         display: none;
     }
 
-    /* Mira estas */
-    .vendido-conteiner .texto-slide-2{
-        font-size: 20px;
-        margin-left: 5px;
-        line-height: 2em;
-    }
-
-    .vendido-conteiner{
-        height: 410px;
-    }
-
-    .card-red, .card-blue{
-        max-width: 80%;
-        height: auto;
-        min-height: 300px;
-    }
-
-    /* BARRA */
-    .barra, .barra-derecha .barra{
+    /* Barras y Títulos */
+    .barra,
+    .barra-derecha .barra {
         width: 30%;
         height: 6px;
     }
 
-    .barra-texto{
+    .barra-texto,
+    .nuestrosLocales {
         font-size: 25px;
     }
 
-    .nuestrosLocales{
-        font-size: 25px;
+    /* Locales */
+    .logolocal-contenedor {
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
-    /* LOCALES */
-    .logolocal-contenedor{
-        gap: 20px
-    }
-
-    .logolocal{
+    .logolocal {
         width: 150px;
         height: 150px;
     }
 
-    .logolocal-img{
+    .logolocal-img {
         width: 140px;
         height: 140px;
     }
 
-    /* Descubre nuestras sedes */
-    .parrafo-sedes{
+    /* Sedes */
+    .parrafo-sedes {
         font-size: 23px;
+        text-align: center;
+        padding: 0 15px;
     }
 
-    .sedes-contenedor{
-        width: auto;
+    .sedes-contenedor {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
-    .sedes-contenedor .sede{
+    .sedes-contenedor .sede {
         width: 90%;
         max-width: 650px;
-        margin: 0;
+        margin: 10px 0;
     }
 
-    .sede-img{
-        width: 80%;
-        height: 80%;
+    .sede-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
         object-fit: cover;
     }
 
     /* Footer */
+    footer {
+        padding: 20px 10px;
+    }
 
-    footer{
+    .footer-left {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        height: 100%;
-        flex-direction: column;
-    }
-
-    .footer-left{
-        display: flex;
-        flex-direction: column;
-        align-items:center;
-        max-width: 100%;
-        gap: 1em;
-        margin-top: 0;
-    }
-
-    .footer-left-img img{
-        width: 250px;
-    }
-
-    .footer-left p{
         width: 100%;
-        font-size: 1.5em;
-        margin-top: 0;
+        gap: 1em;
+        text-align: center;
     }
 
-    .footer-left-logos{
+    .footer-left-img img {
+        width: 200px;
+    }
+
+    .footer-left p {
+        width: 90%;
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+    .footer-left-logos {
         display: flex;
         justify-content: center;
+        gap: 15px;
     }
 
-    .left-logo{
-        margin-top: 0;
-        font-size: 30px;
-        padding: 0 15px;
-
+    .left-logo {
+        font-size: 25px;
+        padding: 0 10px;
     }
 
-    .footer-right, .footer-center{
+    .footer-right,
+    .footer-center {
         display: none;
     }
 
-    footer .parrafo-footer{
+    footer .parrafo-footer {
         width: 100%;
-        font-size: 0.5em;
+        font-size: 0.8em;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .buscador {
+        width: 85%;
+    }
+
+    .texto-slide,
+    .vendido-conteiner .texto-slide-2 {
+        font-size: 18px;
+    }
+
+    .card,
+    .card-red,
+    .card-blue {
+        max-width: 90%;
+    }
+
+    .logolocal {
+        width: 130px;
+        height: 130px;
+    }
+
+    .logolocal-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .parrafo-sedes {
+        font-size: 20px;
+    }
+
+    .footer-left-img img {
+        width: 180px;
+    }
+
+    .footer-left p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 400px) {
+    .menu a {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .texto-slide,
+    .vendido-conteiner .texto-slide-2 {
+        font-size: 16px;
+    }
+
+    .barra-texto,
+    .nuestrosLocales {
+        font-size: 20px;
+    }
+
+    .parrafo-sedes {
+        font-size: 18px;
+    }
+
+    .left-logo {
+        font-size: 20px;
     }
 }
