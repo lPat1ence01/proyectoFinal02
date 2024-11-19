@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <input type="checkbox" id="check">
                     <label for="check" class="mostrar-menu">&#8801</label>
                     <nav class="menu">
-                        <a href="../Main/index.html">Inicio</a>
+                        <a href="../Principal/index.html">Inicio</a>
                         <a href="../Nosotros/nosotros.html">Nosotros</a>
                         <a href="../Eventos/Eventos.html">Eventos</a>
                         <a href="../Locales/Locales.html">Locales</a>
