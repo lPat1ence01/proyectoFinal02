@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         </div>
                         <div class="carrito-compras">
                             <i class="fa-solid fa-cart-shopping"></i>
-                            <p>S/.0.00</p>
+                            <p>S/.0.00</p>  
                         </div>
                         <label for="check" class="esconder-menu">&#215</label>
                     </nav>
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <input type="checkbox" id="check">
                     <label for="check" class="mostrar-menu">&#8801</label>
                     <nav class="menu">
-                        <a href="../Main/index.html">Inicio</a>
+                        <a href="../Principal/index.html">Inicio</a>
                         <a href="../Nosotros/nosotros.html">Nosotros</a>
                         <a href="../Eventos/Eventos.html">Eventos</a>
                         <a href="../Locales/Locales.html">Locales</a>

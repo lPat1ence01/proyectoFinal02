@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: kadwa;
+}
+
+/* Subtitulo Contacto */
+
+.container, .container-2{
+    display: block;
+    max-width: auto;
+    max-height: 100px;
+    margin-top: 2em;
+}
+
+.container h2, .container-2 h2{
+    font-size: 2.5em;
+    color: #000000;
+    padding-left: 1em;
+    margin-bottom: -0.5em;
+}
+
+.container span, .container-2 span{
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-shadow: 
+        -2px -2px 0 black,  
+        2px -2px 0 black,
+        -2px 2px 0 black,
+        2px 2px 0 black;
+}
+
+.contacto-barra{
+    background-color: #FE0008;
+    height: 1em;
+    width: 22%;
+}
+
+.contacto-barra-2{
+    background-color: #FE0008;
+    height: 1em;
+    width: 33%;
+}
+
+/* Atención de consultas */
+.consultas{
+    max-width: 65%;
+    height: auto;
+    margin: 2em;
+    display: block;
+}
+
+.consultas p{
+    font-size: 1.2em;
+    line-height: 0.5em;
+}
+
+/* Medio de pago */
+.medio_pago{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 23%;
+    height: auto;
+    border: 2px solid #FE0008;
+    border-radius: 1em;
+    padding: 0.5em;
+    gap: 1em;
+    margin-left: 2em;
+}
+
+.medio_pago i, .medio_pago_2 i{
+    font-size: 3em;
+}
+
+.medio_pago p, .medio_pago_2 p{
+    font-size: 1.2em;
+}
+
+/* Formulario */
+.container-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.form_grid{
+    display: grid;
+    width: 90%;
+    gap: 1em;
+}
+
+.form_grid label{
+    font-size: 1.5em;
+    line-height: 1.3em;
+    font-weight: bold;
+}
+
+/* Estilo de cada input */
+.form_input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+}
+
+.form_input label {
+    font-size: 1em;
+    margin-bottom: 0.3em;
+    font-weight: normal;
+}
+
+.form_input label{
+    font-size: 1.2;
+}
+
+.form_input input{
+    padding: 0.5em;
+    border: 1.5px solid black;
+    border-radius: 0.75em;
+    background-color: transparent;
+    font-size: 1.1em;
+}
+
+.caducidad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.caducidad input{
+    padding: 0.5em;
+    border: 1.5px solid black;
+    border-radius: 0.75em;
+    background-color: transparent;
+    font-size: 1.1em;
+    width: 30%;
+}
+
+.form_input_chexbox{
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+    margin-left: 2em;
+    gap: 0.8em;
+}
+
+.form_input_chexbox p, .form_input_chexbox a{
+    font-size: 0.9em;
+    color: black;
+}
+
+.boton{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 10em;
+}
+
+button {
+    padding: 0.3em 4.5em;
+    font-size: 1em;
+    background-color: #FE0008;
+    border: none;
+    border-radius: 1em;
+    color: #FFFFFF;
+    margin-top: 1em;
+}
+
+.medio_pago_2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 23%;
+    height: auto;
+    border: 2px solid #FE0008;
+    border-radius: 1em;
+    padding: 0.5em;
+    padding-left: 2.5em;
+    gap: 1em;
+    margin-left: 2em;
+    margin-top: 1em;
+}
