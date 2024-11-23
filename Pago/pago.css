@@ -162,7 +162,7 @@
     margin-left: 10em;
 }
 
-button {
+.enviar {
     padding: 0.3em 4.5em;
     font-size: 1em;
     background-color: #FE0008;
@@ -170,6 +170,7 @@ button {
     border-radius: 1em;
     color: #FFFFFF;
     margin-top: 1em;
+    cursor: pointer;
 }
 
 .medio_pago_2{

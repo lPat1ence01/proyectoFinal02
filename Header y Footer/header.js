@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             <a href="#" class="Ingresar">Hola, ${parsedUser.nombre}!</a>
                             <ul class="submenu">
                                 <li><a href="../Perfil/Perfil.html" id="perfil">Mi Perfil</a></li>
-                                <li><a href="#" id="config">Configuración</a></li>
+                                <li><a href="../Pago/pago.html" id="config">Carrito</a></li>
                                 <li><a href="#" id="logout">Cerrar Sesión</a></li>
                             </ul>
                         </div>

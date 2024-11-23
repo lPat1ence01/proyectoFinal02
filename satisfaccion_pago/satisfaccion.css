@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Kadwa;
+}
+
+/* PRINCIPAL */
+main {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.container-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    height: auto;
+    padding: 2em;
+    box-sizing: border-box;
+    margin-top: 1.5em;
+}
+
+/*Check*/
+.check, .gracias, .stars, .factura{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+
+.check i{
+    margin-top: 0.1em;
+    font-size: 7em;
+}
+
+/*Gracias*/
+.gracias h2{
+    margin-top: 0.2em;
+}
+.gracias p{
+    color: #FE0008;
+    font-weight: bold;
+}
+
+/*Stars*/
+.stars{
+    margin-top: 0.3em;
+    flex-direction: row;
+    font-size: 7em;
+    gap: 0.3em;
+}
+
+.stars i{
+    cursor: pointer;
+    color: black;
+    opacity: 25%;
+    transition: color 0.3s;
+}
+
+.stars i.active,
+.stars i:hover {
+    opacity: 100%;
+    color: gold;
+}
+
+/*Factura*/
+.factura{
+    text-transform: uppercase;
+    margin-top: 1em;
+}
+
+.factura a{
+    margin-top: 1em;
+    background-color: #FE0008;
+    border-radius: 0.5em;
+    padding: 0.5em 2em;
+    font-weight: bold;
+    font-size: 1em;
+}

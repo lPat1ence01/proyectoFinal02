@@ -3,74 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Procesar Pago</title>
+    <title>Finalización Compra</title>
     <link rel="stylesheet" href="../Header y Footer/footer.css">
     <link rel="stylesheet" href="../Header y Footer/header.css">
-    <link rel="stylesheet" href="pago.css">
+    <link rel="stylesheet" href="satisfaccion.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+</head>
 <body>
+
     <div id="header"></div>
 
     <main>
-        <!--Subtitulo Contacto-->
-        <div class="container">
-            <h2>Medio de <span>Pago</span></h2>
-            <div class="contacto-barra"></div>
-        </div>
-
-        <div class="consultas">
-            <p>Recuerda activar tu tarjeta para compras por internet antes de realizar el pago.</p>
-        </div>
-
-        <div class="medio_pago">
-            <i class="fa-regular fa-credit-card"></i>
-            <p>Tarjeta de Crédito o Débito</p>
-        </div>
-
-        <!-- Formulario -->
-         <form class="container-form">
-            <div class="form_grid">
-                <label>Información de tarjeta</label>
-                <div class="form_input">
-                    <label for="num_tarjeta">Número de tarjeta</label>
-                    <input type="number" id="num_tarjeta" placeholder="4111 1111 1234 5678" oninput="limitarDigitos(this)">
-                </div>
-                <div class="form_input">
-                    <label for="fecha">Fecha de caducidad</label>
-                    <div class="caducidad">
-                        <input type="number" id="fecha" placeholder="mm" oninput="limitarDigitos2(this)">
-                        <input type="number" id="fecha" placeholder="aa" oninput="limitarDigitos2(this)">
-                        <input type="number" id="fecha" placeholder="CVV" oninput="limitarDigitos2(this)">
-                    </div>
-                </div>
+        <div class="container-principal">
+            <div class="check">
+                <p>Compra Realizada</p>
+                <i class="fa-regular fa-circle-check"></i>
             </div>
-         </form>
-         <div class="form_input_chexbox">
-            <input type="checkbox">
-            <p>Acepto los <a href="#">térmicos y condiciones y políticas de privacidad.</a></p>
+            <div class="gracias">
+                <h2>¡¡GRACIAS POR SU PREFERENCIA!!</h2>
+                <p>¿Que le pareció su experiencia en nuestra tienda?</p>
+            </div>
+            <div class="stars">
+                <i class="fa-solid fa-star" data-index="1"></i>
+                <i class="fa-solid fa-star" data-index="2"></i>
+                <i class="fa-solid fa-star" data-index="3"></i>
+                <i class="fa-solid fa-star" data-index="4"></i>
+                <i class="fa-solid fa-star" data-index="5"></i>
+            </div>
+            <div class="factura">
+                <h2>Dejanos tu Puntuación</h2>
+                <a href="#">Ver factura</a>
+            </div>
         </div>
 
-        <div class="boton">
-            <a href="../satisfaccion_pago/satisfaccion.html" class="enviar">Enviar</a>
-        </div>
-
-        <!--Subtitulo Contacto-->
-        <div class="container-2">
-            <h2>Otros métodos de <span>Pago</span></h2>
-            <div class="contacto-barra-2"></div>
-        </div>
-
-        <div class="medio_pago_2">
-            <i class="fa-regular fa-credit-card"></i>
-            <p>Yape..</p>
-        </div>
-
-        <div class="medio_pago_2">
-            <i class="fa-regular fa-credit-card"></i>
-            <p>IziPay Ya</p>
-        </div>
     </main>
 
     <div id="footer"></div>
@@ -170,8 +137,8 @@
                 <p class="parrafo-footer">Copyright. Todos los derechos estan reservados, diseños y protegidos por RUTA6 FAST FOOD</p>
             </footer>
         `
-    </script>
+    </script> 
 
-    <script src="pago.js"></script>
+    <script src="satisfaccion.js"></script>
 </body>
 </html>
