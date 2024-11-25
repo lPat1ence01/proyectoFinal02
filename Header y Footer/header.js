@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
         const parsedUser = JSON.parse(user);
         headerElement.innerHTML = `
             <div id="header">
-                <div class="Logo">
+                <a class="Logo" href="../Principal/index.html">
                     <img src="../imagenes/Logo_ruta6.png" class="logo_ruta">
-                </div>
+                </a>
                 <div class="menu-container">
                     <input type="checkbox" id="check">
                     <label for="check" class="mostrar-menu">&#8801</label>
@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
                             <a href="#" class="Ingresar">Hola, ${parsedUser.nombre}!</a>
                             <ul class="submenu">
                                 <li><a href="../Perfil/Perfil.html" id="perfil">Mi Perfil</a></li>
-                                <li><a href="../Pago/pago.html" id="config">Carrito</a></li>
                                 <li><a href="#" id="logout">Cerrar Sesión</a></li>
                             </ul>
                         </div>
@@ -34,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     </nav>
                 </div>
             </div>
+
             <!--Mini Pnatalla del carrito-->
             <div class="contenedor-carrito oculto" id="carrito-modal">
                 <div class="encabezado-carrito">
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <div class="barra-informacion">
                     <span>Items: <span id="cantidad-items">2</span></span>
                     <button class="boton-borrar-todo">
-                        <img src="../imagenes/Ico_Eliminar.png" alt="icono borrar" class="icono-borrar"> Borrar todo
+                        <img src="../imagenes/X-Shape-Free-PNG-Image.png" alt="icono borrar" class="icono-borrar"> Borrar todo
                     </button>
                 </div>
                 <div class="productos-carrito">
@@ -51,10 +51,10 @@ document.addEventListener("DOMContentLoaded", function() {
                         <div class="contenido-producto">
                             <img src="../imagenes/restaurantes/Platos/Saiko/MakiFurai.jpeg" alt="Producto" class="imagen-producto">
                             <div class="informacion-producto">
-                                <h2>Salsa Shoyu</h2>
+                                <h2>Maki Furai</h2>
                                 <p class="enlace-informacion">Ver información</p>
-                                <p class="precio-producto">S/ <span class="precio">1.50</span></p>
-                                <div class="descripcion" style="display: none;">Esta es una salsa de soja japonesa utilizada comúnmente en la cocina asiática.</div>
+                                <p class="precio-producto">S/ <span class="precio">21.50</span></p>
+                                <div class="descripcion" style="display: none;">Descrición del plato.</div>
                             </div>
                             <div class="cantidad-producto">
                                 <button class="boton-disminuir">-</button>
@@ -65,12 +65,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     </div>
                     <div class="producto" data-precio="21.50">
                         <div class="contenido-producto">
-                            <img src="../imagenes/CarritoCompras/Makis_Cabanossi.jpg" alt="Producto" class="imagen-producto">
+                            <img src="../imagenes/restaurantes/Platos/Oralebuey/TacoElbuey.jpeg" alt="Producto" class="imagen-producto">
                             <div class="informacion-producto">
-                                <h2>Makis Cabanossi</h2>
+                                <h2>El buey</h2>
                                 <p class="enlace-informacion">Ver información</p>
-                                <p class="precio-producto">S/ <span class="precio">21.50</span></p>
-                                <div class="descripcion" style="display: none;">Makis de salchicha Cabanossi, deliciosos y fáciles de disfrutar.</div>
+                                <p class="precio-producto">S/ <span class="precio">13.50</span></p>
+                                <div class="descripcion" style="display: none;">Descrición del plato.</div>
                             </div>
                             <div class="cantidad-producto">
                                 <button class="boton-disminuir">-</button>
@@ -100,10 +100,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     } else {
         headerElement.innerHTML = `
-            <header>
-                <div class="Logo">
+            <div id="header">
+                <a class="Logo" href="../Principal/index.html">
                     <img src="../imagenes/Logo_ruta6.png" class="logo_ruta">
-                </div>
+                </a>
                 <div class="menu-container">
                     <input type="checkbox" id="check">
                     <label for="check" class="mostrar-menu">&#8801</label>
@@ -127,7 +127,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         <label for="check" class="esconder-menu">&#215</label>
                     </nav>
                 </div>
-            </header>
+            </div>
+
             <!--Mini Pnatalla del carrito-->
             <div class="contenedor-carrito oculto" id="carrito-modal">
                 <div class="encabezado-carrito">
@@ -137,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <div class="barra-informacion">
                     <span>Items: <span id="cantidad-items">2</span></span>
                     <button class="boton-borrar-todo">
-                        <img src="../imagenes/Ico_Eliminar.png" alt="icono borrar" class="icono-borrar"> Borrar todo
+                        <img src="../imagenes/X-Shape-Free-PNG-Image.png" alt="icono borrar" class="icono-borrar"> Borrar todo
                     </button>
                 </div>
                 <div class="productos-carrito">
@@ -145,10 +146,10 @@ document.addEventListener("DOMContentLoaded", function() {
                         <div class="contenido-producto">
                             <img src="../imagenes/restaurantes/Platos/Saiko/MakiFurai.jpeg" alt="Producto" class="imagen-producto">
                             <div class="informacion-producto">
-                                <h2>Salsa Shoyu</h2>
+                                <h2>Maki Furai</h2>
                                 <p class="enlace-informacion">Ver información</p>
-                                <p class="precio-producto">S/ <span class="precio">1.50</span></p>
-                                <div class="descripcion" style="display: none;">Esta es una salsa de soja japonesa utilizada comúnmente en la cocina asiática.</div>
+                                <p class="precio-producto">S/ <span class="precio">21.50</span></p>
+                                <div class="descripcion" style="display: none;">Descrición del plato.</div>
                             </div>
                             <div class="cantidad-producto">
                                 <button class="boton-disminuir">-</button>
@@ -159,12 +160,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     </div>
                     <div class="producto" data-precio="21.50">
                         <div class="contenido-producto">
-                            <img src="../imagenes/CarritoCompras/Makis_Cabanossi.jpg" alt="Producto" class="imagen-producto">
+                            <img src="../imagenes/restaurantes/Platos/Oralebuey/TacoElbuey.jpeg" alt="Producto" class="imagen-producto">
                             <div class="informacion-producto">
-                                <h2>Makis Cabanossi</h2>
+                                <h2>El buey</h2>
                                 <p class="enlace-informacion">Ver información</p>
-                                <p class="precio-producto">S/ <span class="precio">21.50</span></p>
-                                <div class="descripcion" style="display: none;">Makis de salchicha Cabanossi, deliciosos y fáciles de disfrutar.</div>
+                                <p class="precio-producto">S/ <span class="precio">13.50</span></p>
+                                <div class="descripcion" style="display: none;">Descrición del plato.</div>
                             </div>
                             <div class="cantidad-producto">
                                 <button class="boton-disminuir">-</button>

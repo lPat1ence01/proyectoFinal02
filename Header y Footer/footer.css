@@ -106,6 +106,14 @@ footer .parrafo-footer{
     padding: 5px 0 5px 30px;
 }
 
+body .uwy.userway_p1 .userway_buttons_wrapper {
+    top: auto !important;
+    right: auto;
+    bottom: 13px !important;
+    left: calc(100vw - 21px);
+    transform: translate(-100%);
+}
+
 @media(max-width: 768px){
     /* Footer */
 

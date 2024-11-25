@@ -245,6 +245,14 @@
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
 }
 
+body .uwy.userway_p1 .userway_buttons_wrapper {
+    top: auto !important;
+    right: auto;
+    bottom: 13px !important;
+    left: calc(100vw - 21px);
+    transform: translate(-100%);
+}
+
 /*===========================================*/
 
 /* RESPONSIVE DESIGN */

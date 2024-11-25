@@ -164,7 +164,7 @@ main {
         color: #FFFFFF;
         padding: 5px 25px;
         background-color: #2C3197;
-        text-decoration: none;
+        border: none;
         border-radius: 10px;
         font-size: 13px;
     }
@@ -222,6 +222,14 @@ main {
         background-color: #FE0008;
         margin-top: 2em;
         clip-path: polygon(3% 0,100% 0, 100% 100%, 0% 100%);   
+    }
+
+    body .uwy.userway_p1 .userway_buttons_wrapper {
+        top: auto !important;
+        right: auto;
+        bottom: 13px !important;
+        left: calc(100vw - 21px);
+        transform: translate(-100%);
     }
 
 @media(max-width: 768px){

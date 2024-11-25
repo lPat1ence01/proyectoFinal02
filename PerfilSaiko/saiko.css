@@ -281,6 +281,14 @@
     align-items: flex-start;
 }
 
+body .uwy.userway_p1 .userway_buttons_wrapper {
+    top: auto !important;
+    right: auto;
+    bottom: 13px !important;
+    left: calc(100vw - 21px);
+    transform: translate(-100%);
+}
+
 /* Media Queries */
 @media screen and (max-width: 1200px) {
     .saiko-container {
