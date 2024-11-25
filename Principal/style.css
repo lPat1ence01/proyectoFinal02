@@ -48,7 +48,7 @@
 
 .submenu-container:hover .submenu {
     display: block;
-    z-index: 1; /* Asegura que el submenú se muestre sobre otros elementos */
+    z-index: 1;
 }
 
 /* Ocultar los íconos del menú en modo normal */
